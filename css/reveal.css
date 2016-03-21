@@ -447,7 +447,7 @@ body {
  * ROLLING LINKS
  *********************************************/
 
-.reveal .roll {
+/*.reveal .roll {
 	display: inline-block;
 	line-height: 1.2;
 	overflow: hidden;
@@ -520,7 +520,7 @@ body {
 	   -moz-transform: translate3d( 0px, 110%, 0px ) rotateX( -90deg );
 	    -ms-transform: translate3d( 0px, 110%, 0px ) rotateX( -90deg );
 	        transform: translate3d( 0px, 110%, 0px ) rotateX( -90deg );
-}
+}*/
 
 
 /*********************************************

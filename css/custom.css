@@ -1,0 +1,73 @@
+/* Custom Styles */
+/* csslint ignore: text-indent */
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.html-tag {
+  background-image: url('../images/tagbreakdown.png');
+  background-position: 0 0;
+  background-size: cover;
+  display: block;
+  height: 139px;
+  width: 300px;
+}
+
+.html-closing {
+  background-position: 0 151px;
+}
+
+.reveal .example-container {
+  font-size: 30px;
+}
+
+.reveal .example {
+  font-size: .75em;
+}
+
+.reveal .img-small {
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+.reveal .img-medium {
+  max-width: 400px;
+  vertical-align: middle;
+}
+
+.reveal section .gdi-logo {
+  border: 0;
+  box-shadow: none;
+  width: 50%;
+}
+
+.reveal pre {
+  margin-bottom: -15px;
+}
+
+.two-column-code pre {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45%;
+}
+
+.reveal .example-container-2 {
+  font-size: 30px;
+}
+
+.reveal .example-2 {
+  font-size: .75em;
+}
+
+.reveal .example-2 .example-2 {
+  font-size: 1em;
+}
