@@ -30,7 +30,7 @@ Discuss using responsive widths (max- and min- width, percentage widths), margin
 
 #### Box Model
 
-What is the box model? How does it work. How can we fix it? Does it need fixing?
+What is the box model? How does it work. How can we fix it? Does it need fixing? Box-sizing!!!!
 
 ### Class 2
 

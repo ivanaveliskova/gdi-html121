@@ -83,7 +83,7 @@
                         <span class="blue fragment">define: attribute</span>
                     </div>
                     <p class="fragment">Attribute: a quality or feature regarded as a characteristic or inherent part of someone or something (From Google)</p>
-                    <p class="fragment">Try to do this with all other elements you might not know</p>
+                    <p class="fragment">Try to do this with all other elements and words you might not know in HTML/CSS</p>
 
                     <aside class="notes">
                         <p>(Step 1) We like to overthink anything we hear, our adult brains have been conditioned this way. We tend of overanalyze words that are meant in the most basic form</p>
@@ -103,6 +103,7 @@
                             <li class="fragment float-left">Opening Tag <span class="html-tag"></span></li>
                             <li class="fragment float-right">Closing Tag <span class="html-tag html-closing"></span></li>
                             <li class="fragment clear">They act like nesting dolls: first one to open is the first one to close</li>
+                            <li class="fragment">There are some stand alone elements that don't have closing tags such as &lt;img/&gt; `</li>
                         </ul>
 
                         <aside class="notes">
@@ -474,8 +475,58 @@ div div {
                     </section>
                 </section>
 
-            <!-- Spare section to allow for fragments to work -->
-                <section></section>
+                <section>
+                    <section>
+                        <h3>Box Model</h3>
+                        <div class="box-model-margin fragment">
+                            <p>Margin</p>
+                            <div class="box-model-border">
+                                <p>Border</p>
+                                <div class="box-model-padding">
+                                    <p>Padding</p>
+                                    <div class="box-model-box"><p>The Box</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Box Model</h3>
+                        <p class="fragment">If we are trying to make pixel perfect designs, this will mess us up.</p>
+                        <p class="fragment">How do we fix this in order to match our pixel perfect designs?</p>
+                        <pre class="fragment">
+                            <code>.selector {
+    box-sizing: border-box;
+}</code>
+                        </pre>
+                        <p class="fragment">The box will recalculate itself if there is padding and border to remain the same width and height.</p>
+                        <a href="http://codepen.io/ivanaveliskova/pen/ONpxMw" class="fragment" target="_blank">Codepen example</a>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>Let's develop it!</h3>
+                    <div class="fragment">
+                        <p class="blue">Set the fonts</p>
+                        <ul>
+                            <li>Set the base font to be whatever size you want. Using the <a href="">px-to-em</a> calculator, set the font sizes for the general 'h1', 'h2', 'h3'... etc. as well as 'p' tags and any other text tags</li>
+                            <li>Free free remove any added css font-sizes on the elements to be able to see your changes.</li>
+                        </ul>
+                        <p class="blue">Bonus!</p>
+                        <ul>
+                            <li>Use box sizing on all of the elements on the page and see how everything (if anything) changes.</li>
+                        </ul>
+                    </div>
+
+                    <aside class="notes">
+                        <p>Take about 15-20minutes</p>
+                    </aside>
+                </section>
+
+                <section>
+                  <h2>Questions?</h2>
+                  <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
+                    <div class="clear"></div></div>
+                </section>
 
             </div>
         <footer>
