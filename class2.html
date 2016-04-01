@@ -59,8 +59,214 @@
                 </section>
 
                 <section>
-                    
+                    <section>
+                        <h3>Directory Structure</h3>
+                        <p>Organizing your files</p>
+                        <p class="fragment">When you have a small site (e.g. a landing page, a CSS file, and maybe a js file, and some images), this isn't as big of a deal</p>
+                        <p class="fragment blue">BUT!</p>
+                        <p class="fragment">If you are consistent and do this no matter how small the site is, your sites will be easier to develop and you will have an easier time working on teams.</p>
+                    </section>
+
+                    <section>
+                        <h3>Directory Structure</h3>
+                        <p class="blue">Examples</p>
+                        <div class="two-column-code">
+                            <pre><p class="fragment">Basic</p>
+<code class="fragment">&rdsh; /your_main_folder
+    &rdsh; /images
+        &mdash; me.jpg
+    &rdsh; /javascripts
+        &mdash; myjs.js
+    &rdsh; /stylesheets
+        &mdash; mystyles.css
+    &mdash; index.html</code></pre>
+                            <pre><p class="fragment">More Advanced</p>
+<code class="fragment">&rdsh; /your_main_folder
+    &rdsh; /assets
+        &rdsh; /fonts
+            &mdash; icons.woff
+        &rdsh; /images
+            &mdash; me.jpg
+            &mdash; logo.svg
+        &rdsh; /javascripts
+            &mdash; jquery.min.js
+            &mdash; my_js.js
+        &rdsh; /stylesheets
+            &mdash; my_styles.css
+    &rdsh; /views
+        &rdsh; /any_individual_folders
+        &mdash; index.html</code></pre>
+                        </div>
+
+                    </section>
                 </section>
+
+                <section>
+                    <section>
+                        <h3>CSS Preprocessors</h3>
+                        <p class="fragment">Several ones you can use or learn about</p>
+                        <p class="left-align fragment">Sass <span class="float-right">CSS</span></p>
+                        <div class="fragment two-column-code">
+                            <pre><code class="sass css">$red:          #cf202d
+$almost-white: #f1f2f2
+$base-font-size: 10px
+
+body
+    font-size: $base-font-size
+    background: $almost-white
+
+    p
+        color: $almost-white
+        font-size: 1.6em
+        background: $red
+
+.my-class
+    color: $red
+</code></pre>
+                            <pre><code class="css">body {
+    font-size: 10px;
+    background: #f1f2f2;
+}
+
+body p {
+    color: #f1f2f2;
+    font-size: 1.6em; /* This is 16px */
+    background: #cf202d;
+}
+
+.my-class {
+    color: #cf202d;
+}</code></pre>
+                        </div>
+
+                        <aside class="notes">
+                            <p>Organizing you files in the examples on the previous slide will allow you to more easily begin using CSS preprocessors</p>
+                            <p>Sass --> Syntactically Awesome Style Sheets</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h3>CSS preprocessors</h3>
+                        <p class="left-align fragment">SCSS <span class="float-right">CSS</span></p>
+                        <div class="fragment two-column-code">
+                            <pre><code class="scss css">$red:          #cf202d;
+$almost-white: #f1f2f2;
+$base-font-size: 10px;
+
+body {
+    font-size: $base-font-size;
+    background: $almost-white;
+
+    p {
+        color: $almost-white;
+        font-size: 1.6em;
+        background: $red;
+    }
+}
+
+.my-class {
+    color: $red;
+}
+</code></pre>
+                            <pre><code class="css">body {
+    font-size: 10px;
+    background: #f1f2f2;
+}
+
+body p {
+    color: #f1f2f2;
+    font-size: 1.6em; /* This is 16px */
+    background: #cf202d;
+}
+
+.my-class {
+    color: #cf202d;
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>CSS preprocessors</h3>
+                        <p class="left-align fragment">LESS <span class="float-right">CSS</span></p>
+                        <div class="fragment two-column-code">
+                            <pre><code class="less css">@red:          #cf202d;
+@almost-white: #f1f2f2;
+@base-font-size: 10px;
+
+body {
+    font-size: @base-font-size;
+    background: @almost-white;
+
+    p {
+        color: @almost-white;
+        font-size: 1.6em;
+        background: @red;
+    }
+}
+
+.my-class {
+    color: @red;
+}
+</code></pre>
+                            <pre><code class="css">body {
+    font-size: 10px;
+    background: #f1f2f2;
+}
+
+body p {
+    color: #f1f2f2;
+    font-size: 1.6em; /* This is 16px */
+    background: #cf202d;
+}
+
+.my-class {
+    color: #cf202d;
+}</code></pre>
+                    </section>
+
+                    <section>
+                        <h3>CSS Preprocessors</h3>
+                        <p class="fragment">For smaller projects it doesn't make sense to have this set up.</p>
+                        <p class="fragment">But in larger projects or projects worked on by several people or teams this is extremely helpful.</p>
+                        <p class="fragment">CSS prepropcessors allow us to write DRY code through the use of mixins which are sort of like functions.</p>
+                        <p class="fragment">Check out <a href="http://sass-lang.com/">sass-lang</a> for more info on Sass and SCSS and <a href="http://lesscss.org/">lesscss.org</a> for more on LESS.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <h3>CSS Organization</h3>
+                    <ul>
+                        <li>Organize elements from least specific to most
+                            <ul>
+                                <li class="fragment">
+                                    Elements come first
+                                    <pre class="short-code fragment"><code>body {}
+div {}
+ul {}
+p {}
+a {}
+</code></pre>
+                                </li>
+                                <li class="fragment">
+                                    Then do any classes (in the order that they appear in your document)
+                                    <pre class="short-code fragment"><code>.header {}
+.nav {}
+.container {}
+.content {}
+.footer {}
+</code></pre>
+                                </li>
+                                <li class="fragment">
+                                    Finally extremely specific styles
+                                    <pre class="short-code fragment"><code>#facebook-icon {}
+#copyright {}
+</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </section>
+
 
                 <section>
                     Spare section

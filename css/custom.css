@@ -13,6 +13,10 @@
   clear: both;
 }
 
+.vertical-align-middle {
+  vertical-align: middle !important;
+}
+
 .html-tag {
   background-image: url('../images/tagbreakdown.png');
   background-position: 0 0;
@@ -54,9 +58,10 @@
   margin-bottom: 0;
 }
 
-.two-column-code pre {
+.two-column-code pre,
+.two-column-code p {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 45%;
 }
 
@@ -111,5 +116,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
+.reveal .full-width {
+  width: 100%;
+}
+
+.reveal .short-code {
+  width: 30%;
+  display: inline-block;
+  vertical-align: middle;
 }
