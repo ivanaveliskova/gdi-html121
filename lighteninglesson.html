@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>HTML121 - Class 1</title>
+
+        <meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+        <meta name="author" content="Girl Develop It">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/gdisunny.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
+        <!-- dark editor<link rel="stylesheet" href="lib/css/dark.css">-->
+
+        <!-- If use the PDF print sheet so students can print slides-->
+        
+        <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+
+        <link rel="stylesheet" href="css/custom.css">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <img src="images/gdi_logo_badge.png" alt="" class="gdi-logo"/>
+                    <h3>Intermediate HTML and CSS</h3>
+                </section>
+
+                <section>
+                    <h3>HTML</h3>
+                    <div class="left-align">
+                        <p class="fragment">Keep it simple!</p>
+                        <div class="fragment">
+                            <img src="images/wibbly_wobbly.gif" alt="" class="img-small float-right"/>
+                            <p>From a non-technical (and non-linear) point of view...</p>
+                        </div>
+                        <p class="fragment">Either in your own words or using google <span class="blue">define: attribute</span></p>
+                    </div>
+                    <p class="fragment">Attribute: a quality or feature regarded as a characteristic or inherent part of someone or something (From Google)</p>
+                    <p class="fragment">Try to do this with all other elements and words you might not know in HTML/CSS</p>
+
+                    <aside class="notes">
+                        <p>(Step 1) We like to overthink anything we hear, our adult brains have been conditioned this way. We tend of overanalyze words that are meant in the most basic form</p>
+                        <p>When we let our heads go into a sort of "tech mode" we start to think simple words are way more complicated than they actually are.</p>
+                        <p>EXAMPLE! (Step 2+3+4) Let's pretend we are not learning anything to do with HTML/CSS... we are currently in English class getting ready for the SATs, what does the word attribute mean in English? Use your own words. Feel free to look it up, but put it into your own words. (No technical related definitions.)</p>
+                        <p>(Step 5) Now let's apply this to HTML: an attribute on an HTML element is a characteristic, or addition information, about the element itself (what styles it has, classes, ids, the source, the href, etc.) </p>
+                        <p>Actual technical definition of an attribute: attributes are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.</p>
+                    </aside>
+                </section>
+                
+                <section>
+                    <h3>Inspector</h3>
+                    <p>Live in the Inspector!</p>
+                    <p>Some things you might want to use in the inspector:</p>
+                    <ul>
+                        <li>The Elements tab: shows you your HTML and associated CSS
+                        <span class="tip">Tip: When you hover over different elements in the HTML it will highlight the associated element and show the box model that it is following (so padding, margins, borders, width)</span>
+                        </li>
+                        <li>If you click on the CSS area you can add test styles until you get your desired effect.</li>
+                        <li>You can also add classes, attributes, and edit the HTML if it isn't showing up the way you want it to initially and then add styles to the new class you added</li>
+                    </ul>
+                </section>
+
+            </div>
+        <footer>
+        <div class="copyright">
+          HTML 121 -- GDI Philly --
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }, 
+                    { src: 'socket.io/socket.io.js', async: true },
+                    { src: 'plugin/notes-server/client.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
