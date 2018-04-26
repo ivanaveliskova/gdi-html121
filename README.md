@@ -1,39 +1,34 @@
-# HTML121
+> Please read the national chapter's slide creation guidelines in [the wiki](https://github.com/girldevelopit/gdi-slides-template/wiki). Then, delete this banner and add the specifics about your class below.
 
-Advanced Concepts in HTML and CSS
+# Add Your Course Title Here
 
-### This is written using reveal.js 
+Slides and materials are hosted at [http://gdiphilly.github.io/your-repo-name/](http://gdiphilly.github.io/your-repo-name/).
 
-See more at originally published at: [https://github.com/hakimel/reveal.js/](https://github.com/hakimel/reveal.js/)
+## Course description
+
+Use this space for a short description of your course. We recommend using the description from your meetup event.
+
+**Cost:** 
+
+**Course length:** (days/hours) 
+
+### Prerequisites:
+
+List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
 
 
-## Class structure
+### Tech requirements:
 
-This class will be divided up into 4(or 2?) classes/sections. (2 days, 4 hours each with a break in between)
+Edit this list as needed for your class. The following are just suggestions.
 
-### Class 1
-#### HTML/CSS Review
+ - Your laptop (Mac, PC, or Linux are all okay).
+ - A modern web browser - either Chrome or Firefox with Firebug installed.
+ - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
 
-Review the basics of HTML and CSS, open up a standard page in our browser
 
-#### Semantic HTML
+### Topics covered:
 
-Discuss what semantic HTML is and why it is important
+ - The topics you plan to cover
+ - Written in list form
+ - Here's another one
 
-#### Responsive HTML
-
-Discuss that HTML is already responsive and doesn't need anything to necessarily make it responsive, and that there are ways we can help keep HTML responsive and not hinder the ability to continue to be responsive.
-
-#### CSS
-
-Discuss using responsive widths (max- and min- width, percentage widths), margins, calc(), percentage margins/padding. 'Responsive' fonts (using ems).
-
-#### Box Model
-
-What is the box model? How does it work. How can we fix it? Does it need fixing? Box-sizing!!!!
-
-### Class 2
-
-### Class 3
-
-### Class 4
