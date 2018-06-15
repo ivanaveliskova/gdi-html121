@@ -1,6 +1,8 @@
 /* Custom Styles */
 /* csslint ignore: text-indent */
 
+html { font-size: 30px;}
+
 .float-right {
   float: right;
 }
@@ -80,6 +82,11 @@
 .reveal .example-2 .example-2 {
   font-size: 1em;
 }
+
+.reveal .example-3 {
+  font-size: 0.75rem;
+}
+
 
 .reveal .box-model-margin {
   width: 600px;

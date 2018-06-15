@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: magenta;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blueviolet
+}
+
+a:active {
+ color: white;
+}
+
+img {
+  margin: 10px;
+  max-width: 500px;
+  min-width: 300px;
+  width: 95%;
+}
+
+p {
+  padding: 10px;
+}
+
+p + p {
+  background: pink;
+}
+
+li > a {
+  color: deepskyblue;
+}
+
+.header {
+  background: url('../images/background-img.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.header__side-nav {
+  padding-top: 10px;
+}
+
+.header__side-nav ul {
+  overflow: auto;
+}
+
+.header__side-nav li {
+  float: right;
+  margin: 0 10px 10px;
+  overflow: auto;
+}
+
+.header__heading {
+  font-size: 2.6rem;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+}
+
+.header__introduction {
+  font-size: 1.6rem;
+}
+
+.header__heading,
+.header__introduction {
+  color: lawngreen;
+}
+
+.content-wrapper {
+  max-width: 1024px;
+  text-align: center;
+}
+
+.gallery img {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5%;
+}
+
+.gallery__image--bridge {
+  background: yellow;
+}
+
+.gallery__image--raspberries {
+  background: plum;
+}
+
+.footer {
+  background-color: mediumorchid;
+  height: 100px;
+  margin: 0;
+}
+
+
+.footer p {
+  color: white;
+  text-align: center;
+}

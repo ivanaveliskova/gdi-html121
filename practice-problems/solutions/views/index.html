@@ -2,44 +2,44 @@
 <html>
     <head>
         <title>My Page</title>
-        <link rel="stylesheet" type="text/css" href="mycss.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/mycss.css">
     </head>
     <body>
 
         <div class="header-wrapper">
             <div class="header">
-                <div class="side-nav">
+                <div class="header__side-nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Places to Visit</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="header__side-nav-item header__side-nav-item--home"><a href="#">Home</a></li>
+                        <li class="header__side-nav-item header__side-nav-item--about"><a href="#">About Me</a></li>
+                        <li class="header__side-nav-item header__side-nav-item--places"<a href="#">Places to Visit</a></li>
+                        <li class="header__side-nav-item header__side-nav-item--contact"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <p class='heading'>Welcome to My Page!</p>
-                <h1 class='introduction'>This is my intro paragraph. It will have a full screen background image and the whole page will be fully responsive without the use of media queries. Images on this page can be found at: <a href="https://unsplash.com/">unsplash.com</a>. We are going to need to clean it up. A lot!</h1>
+                <h1 class='header__heading'>Welcome to My Page!</h1>
+                <p class='header__introduction'>This is my intro paragraph. It will have a full screen background image and the whole page will be fully responsive without the use of media queries. Images on this page can be found at: <a href="https://unsplash.com/">unsplash.com</a>. We are going to need to clean it up. A lot!</p>
                 <p>It’s a bit more exciting when you go the other way. I don't know. But I'd probably blame the English. I've made many mistakes... and it's about time that I did something about that. Sorry, I'm going to have to relieve you of your pet. Shut up, I was talking to the horse. Big scarf, bow tie, big embarrassing. Why do you have three mirrors? Why don't you just turn your head? The Doctor. Nosey parker. Shut it, Hoodie! No, not the hugging. I'm against the hugging. So you've got a room for not being awake in. What's the point? You're just missing the room!</p>
             </div>
         </div>
 
         <div class="content-wrapper">
             <div class="content">
-                <h2 class="gallery-heading">Yay! <div>My gallery of images!</div></h2>
+                <h2 class="gallery-heading">My gallery of images!</h2>
 
-                <p>Why is the other text on the next line? <div>You might need to inspect your browser to see what's really going on and why this page looks so, so bad.</div> What happened?</p>
+                <p>You might need to inspect your browser to see what's really going on and why this page looks so, so bad.</p>
                 <div class="gallery">
-                    <img src="image-1.jpeg" alt="desk">
-                    <img src="image-2.jpeg" alt="bridge">
-                    <img src="image-3.jpg" alt="cup of raspberries">
-                    <img src="image-4.jpeg" alt="notebook">
-                    <img src="image-5.jpeg" alt="tea">
-                    <img src="image-6.jpg" alt="flowers">
-                    <img src="image-7.jpeg" alt="frozen fruit">
-                    <img src="image-8.jpeg" alt="golden gate bridge">
-                    <img src="image-9.jpeg" alt="workstation">
-                    <img src="image-10.jpeg" alt="hipster coffee shop">
+                    <img class="gallery__image gallery__image--desk" src="../assets/images/image-1.jpeg" alt="desk">
+                    <img class="gallery__image gallery__image--bridge" src="../assets/images/image-2.jpeg" alt="bridge">
+                    <img class="gallery__image gallery__image--raspberries" src="../assets/images/image-3.jpg" alt="cup of raspberries">
+                    <img class="gallery__image gallery__image--notebook" src="../assets/images/image-4.jpeg" alt="notebook">
+                    <img class="gallery__image gallery__image--tea" src="../assets/images/image-5.jpeg" alt="tea">
+                    <img class="gallery__image gallery__image--flowers" src="../assets/images/image-6.jpg" alt="flowers">
+                    <img class="gallery__image gallery__image--fruit" src="../assets/images/image-7.jpeg" alt="frozen fruit">
+                    <img class="gallery__image gallery__image--bridge" src="../assets/images/image-8.jpeg" alt="golden gate bridge">
+                    <img class="gallery__image gallery__image--workstation" src="../assets/images/image-9.jpeg" alt="workstation">
+                    <img class="gallery__image gallery__image--coffee-shop" src="../assets/images/image-10.jpeg" alt="hipster coffee shop">
                 </div>
-                <img src="end-image.jpg" class="bottom-image" alt="David Tennant">
+                <img src="../assets/images/end-image.jpg" class="bottom-image" alt="David Tennant">
                 <p>I'm the Doctor, I can save the world with a kettle and some string! And look! I'm wearing a vegetable! There was a war. A Time War. The Last Great Time War. My people fought a race called the Daleks, for the sake of all creation. And they lost. We lost. Everyone lost. They're all gone now. My family. My friends. Even that sky. Allons-y! Yeah? Well I'm the Lord of Time. Black tie...Whenever I wear this, something bad always happens. Oh, yes. Harmless is just the word: that's why I like it! Doesn't kill, doesn't wound, doesn't maim. But I'll tell you what it does do: it is very good at opening doors!</p>
                 <p class="paragraph">Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey Pidgeotto Pidgeot Rattata Raticate Spearow Fearow Ekans Arbok Pikachu Raichu Sandshrew Sandslash Nidoran Nidorina Nidoqueen Nidoran Nidorino Nidoking Clefairy Clefable Vulpix Ninetales Jigglypuff Wigglytuff Zubat Golbat Oddish Gloom Vileplume Paras Parasect Venonat Venomoth Diglett Dugtrio Meowth Persian Psyduck Golduck Mankey Primeape Growlithe Arcanine Poliwag Poliwhirl Poliwrath Abra Kadabra Alakazam Machop Machoke Machamp Bellsprout Weepinbell Victreebel Tentacool Tentacruel Geodude Graveler Golem Ponyta Rapidash Slowpoke Slowbro Magnemite Magneton Farfetch?d Doduo Dodrio Seel Dewgong Grimer Muk Shellder Cloyster Gastly Haunter Gengar Onix Drowzee Hypno Krabby Kingler Voltorb Electrode Exeggcute Exeggutor Cubone Marowak Hitmonlee Hitmonchan Lickitung Koffing Weezing Rhyhorn Rhydon Chansey Tangela Kangaskhan Horsea Seadra Goldeen Seaking Staryu Starmie Mr. Mime Scyther Jynx Electabuzz Magmar Pinsir Tauros Magikarp Gyarados Lapras Ditto Eevee Vaporeon Jolteon Flareon Porygon Omanyte Omastar Kabuto Kabutops Aerodactyl Snorlax Articuno Zapdos Moltres Dratini Dragonair Dragonite Mewtwo Mew</p>
             </div>
@@ -47,7 +47,7 @@
 
         <div class="building-something-cool-with-this-div"></div>
         <div class="footer">
-            <h1>Please fix this page</h1>
+            <p>Please fix this page</p>
         </div>
     </body>
 </html>

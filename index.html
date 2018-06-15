@@ -113,13 +113,24 @@
 						their behavior in various ways to meet the criteria the users want.</p>
 				</aside>
 			</section>
-			<!-- HTML Review -->
+      <!-- HTML Review -->
+      
+      <section>
+        <h3>Review: Anatomy of a website</h3>
+        <div class="left-align">
+          <span class="blue"> Your Content</span><br />
+          <span class="blue">+ HTML </span>(structure)<br />
+          <span class="blue">+ CSS </span>(presentation)<br />
+          <span class="blue">= Your Website</span>
+          <p>A website is a way to present your content to the world, using HTML and CSS to make it look good.</p>
+        </div>
+      </section>
 
 			<section>
 				<h3>HTML</h3>
 				<h4>Review</h4>
 				<ul>
-					<li class="fragment">HTML is the building blocks of all websites</li>
+					<li class="fragment">HTML gives structure and content to all websites</li>
 					<li class="fragment float-left">Opening Tag
 						<span class="html-tag"></span>
 					</li>
@@ -127,7 +138,7 @@
 						<span class="html-tag html-closing"></span>
 					</li>
 					<li class="fragment clear">They act like nesting dolls: last one to open is the first one to close</li>
-					<li class="fragment">There are some stand alone elements that don't have closing tags such as &lt;img/&gt;</li>
+					<li class="fragment">There are some elements that are their own closing tag. We call these elements 'self-closing'. ex. &lt;img/&gt;</li>
 				</ul>
 
 				<aside class="notes">
@@ -175,7 +186,8 @@
 			<!-- CSS Review -->
 			<section>
 				<h3>CSS</h3>
-				<h4>Review</h4>
+        <h4>Review</h4>
+        <p class="fragment">CSS is like the skin! It makes the website look beautiful and not like a creepy skeleton running around.</p>
 				<ul>
 					<li class="fragment">CSS breakdown:
 						<img src="images/cssrule.png" alt="" class="img-medium" />
@@ -254,11 +266,14 @@
 				<div class="fragment">
 					<p>Poor example:</p>
 					<pre><code class="html">&lt;p&gt;Welcome!&lt;/p&gt;
-&lt;h2&gt;This is a lot of text and propbably was not a good idea to use a header for this.&lt;/h2&gt;</code></pre>
+&lt;h2&gt;
+  This is a lot of text and probably was not a 
+  good idea to use a header for this.
+&lt;/h2&gt;</code></pre>
 				</div>
 				<div class="fragment">
 					<p>Welcome!</p>
-					<h2>This is a lot of text and propbably was not a good idea to use a header for this.</h2>
+					<h2>This is a lot of text and probably was not a good idea to use a header for this.</h2>
 				</div>
 				<aside class="notes">
 					<p>Although there are limitations to what semantic markup we have available to us, we can try to make it as semantic as
@@ -404,14 +419,15 @@
 				<div class="fragment">
 					<p class="blue">Starting out</p>
 					<ul>
-						<li>Open the practice exercises folder in your text editor and index.html in your browser</li>
+            <li>Open the practice exercises folder in your text editor and index.html in your browser</li>
+            <li>We have a few REALLY important things that are missing from our CSS file. Fix those first before working on anything else.</li>
 						<li>Check that elements are being used semantically</li>
-						<li>Use a percentage width on the images in the gallery and the bottom image</li>
+            <li>Use a percentage width on the images in the gallery and the bottom image</li>
+            <li>Add a percentage padding on the images in the gallery.</li>
 					</ul>
 					<p class="blue">Bonus!</p>
 					<ul>
-						<li>Apply a max width on the inner content but try to leave the header and footer sections at full bleed (try to make them
-							touch the edge of the page).</li>
+						<li>Apply a max width on the inner content but try to leave the header and footer sections at full bleed (they continue to touch the edge of the page).</li>
 						<li>When checking the page size on a mobile screen, try to figure out why the text content is covering the footer text.</li>
 					</ul>
 				</div>
@@ -533,7 +549,7 @@ div {
 			<section>
 				<h3>CSS</h3>
 				<h4>Fonts</h4>
-				<p class="fragment">There is a solution!</p>
+				<p class="fragment">There are solutions!</p>
 				<pre class="fragment" style="margin-bottom: 0; line-height: 1em;"><code class="css">body {
   font-size: 30px; /* This is our base font */
 }
@@ -560,7 +576,32 @@ div div {
 					<p>As a side note: you probably don't want to be setting your ems to divs because that with the rules of cascading, that
 						can lead you to all kinds of trouble with putting paragraphs within divs etc.</p>
 				</aside>
-			</section>
+      </section>
+      
+      <section>
+          <h3>CSS</h3>
+          <h4>Fonts</h4>
+          <p class="fragment">There are solutions! (continued)</p>
+          <h4 class="fragment">REM!</h4>
+          <p class="fragment">No... not the band REM</p>
+          <pre class="fragment" style="margin-bottom: 0; line-height: 1em;"><code class="css">html {
+  font-size: 30px; /* This is our base font */
+}
+
+div {
+  font-size: 0.75rem; /* All divs will have 22px font */
+}</code></pre>
+  
+          <div class="example-container-3 fragment">
+            This is the base font size.
+            <div class="example-3 fragment">
+              This is ok and no problem.
+              <div class="example-3 fragment">Yay! This is fixed!
+                  <div class="example-3 fragment">And so is this!</div>
+              </div>
+            </div>
+          </div>
+      </section>
 
 			<section>
 				<h3>Box Model</h3>
@@ -571,7 +612,7 @@ div div {
 						<div class="box-model-padding">
 							<p>Padding</p>
 							<div class="box-model-box">
-								<p>The Box</p>
+								<p>Content</p>
 							</div>
 						</div>
 					</div>
@@ -579,7 +620,7 @@ div div {
 			</section>
 			<section>
 				<h3>Box Model</h3>
-				<p class="fragment">If we are trying to make pixel perfect designs, this will mess us up.</p>
+				<p class="fragment">If we are trying to make pixel perfect responsive designs, percentage widths and padding can mess us up</p>
 				<p class="fragment">How do we fix this in order to match our pixel perfect designs?</p>
 				<pre class="fragment"><code>.selector {
   box-sizing: border-box;
@@ -591,11 +632,13 @@ div div {
 			<section>
 				<h3>Let's develop it!</h3>
 				<div class="fragment">
+          <p>Adjust the bottom text so it doesn’t cover the footer (remove the height constraint, add an overflow)</p>
 					<p class="blue">Set the fonts</p>
 					<ul>
 						<li>Set the base font to be whatever size you want. Using the
 							<a href="">px-to-em</a> calculator, set the font sizes for the general 'h1', 'h2', 'h3'... etc. as well as 'p' tags and any other
-							text tags</li>
+              text tags</li>
+            <li>Try to apply rems!</li>
 						<li>Free free remove any added css font-sizes on the elements to be able to see your changes.</li>
 					</ul>
 					<p class="blue">Bonus!</p>
@@ -608,13 +651,6 @@ div div {
 					<p>Take about 15-20minutes</p>
 				</aside>
 			</section>
-<!-- 
-			<section>
-				<h2>Questions?</h2>
-				<div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
-					<div class="clear"></div>
-				</div>
-			</section> -->
 
 			<section>
 				<h3>Directory Structure</h3>
@@ -658,7 +694,6 @@ div div {
 				</div>
 
 			</section>
-      <!-- Develop It Organize the example files into directories -->
 
       <section>
         <h3>CSS Organization</h3>
@@ -750,52 +785,64 @@ a {}</code></pre>
           <p class="fragment">Try not to use IDs for styling.</p>
           <p class="fragment">Typically IDs are used for JS hooks.</p>
           <p class="fragment">Also they are super specific and can't be reused in the future if you want to have similar styles somewhere else.</p>
-          <p class="fragment">IDs can only be overridden with other IDs</p>
+          <p class="fragment">IDs can only be overridden with other IDs or more extreme methods such as inline styling or through the use of !important</p>
         </section>
+
+        <section>
+            <h3>Let's Develop It!</h3>
+            <div class="fragment">
+              <p>Organize the files into individual directories.</p>
+              <p>Organize the CSS in an order that makes sense.</p>
+              <p>Try to rename some of the classes following BEM practices!</p>
+    
+              <p>Bonus: Let's also remove some of the ID's used for styling (don't be afraid to add new classes to help!)</p>
+    
+            </div>
+          </section>
 
       <section>
         <h3>CSS Selectors</h3>
         <p>Let's take a look at the CSS selectors we might already be familiar with:</p>
         <ul>
-          <li>Tag selectors: div, p, ul, li, a, etc.</li>
+          <li>Element selectors: div, p, ul, li, a, etc.</li>
           <li>Classes: .list, .paragraph, .icon</li>
           <li>IDs: #footer, #footer</li>
           <li>Child Selectors: a .icon will select any .icon within a tags</li>
           <li>Link pseudo selectors: a:link, a:visited, a:hover, a:active</li>
         </ul>
-        <p>But CSS is magical and we can select way more stuff and be more speicifc without resorting to IDs!</p>
+        <p>But CSS is magical and we can select way more stuff and be more specific without resorting to IDs!</p>
       </section>
 
       <section>
         <h3>CSS Selectors</h3>
         <div class="two-column-code">
-        <pre><code class="css">div > .class {}</code></pre>
+        <pre><code class="css">div > .pretty {}</code></pre>
         <pre><code class="html">&lt;div>
-  &lt;span class="class">
+  &lt;span class="pretty">
     This has the styles!
-    &lt;span class="class">
+    &lt;span class="pretty">
       But this doesn't!
     &lt;/span>
   &lt;/span>
 &lt;/div></code></pre></div>
 <div class="two-column-code">
-        <pre><code class="css">div + .class {}</code></pre>
+        <pre><code class="css">div + .pretty {}</code></pre>
         <pre><code class="html">&lt;div>&lt;/div>
-&lt;p class="class">
+&lt;p class="pretty">
   This has the styles!
 &lt;/p>
- &lt;div class="class">
+ &lt;div class="pretty">
   But this doesn't!
 &lt;/div></code></pre></div>
 <div class="two-column-code">
-        <pre><code class="css">div ~ .class {}</code></pre>
-        <pre><code class="html">&lt;div class="class">
+        <pre><code class="css">div ~ .pretty {}</code></pre>
+        <pre><code class="html">&lt;div class="pretty">
   This doesn't have the styles!
 &lt;/div>
-&lt;p class="class">
+&lt;p class="pretty">
   This has the styles!
 &lt;/p>
-  &lt;p class="class">
+  &lt;p class="pretty">
   And so does this!
 &lt;/p></code></pre></div>
       </section>
@@ -809,7 +856,16 @@ a {}</code></pre>
       </section>
 
 
-      <!-- Develop It -->
+      <section>
+        <h3>Let's Develop It!</h3>
+        <div class="fragment">
+          <p>Select only every p tag that is a direct sibling of another p tag</p>
+          <p>Make those paragraphs have a blue background.</p>
+          <p>Other paragraphs should continue to have a their current background color.</p>
+          <p>Try selecting another tag on the page indirectly using this method (i.e. anchor tag that is a direct descendent of a list item). Add some of your favorite styles.</p>
+          <p>Bonus: there is a div with the class "building-something-cool-with-this-div" try using :before and :after to style it. Remember, if you want to see changes before and after need to have "content"</p>
+        </div>
+      </section>
 
 
 			<section>
@@ -952,57 +1008,57 @@ body p {
 
       <section>
         <p>Now back to our regularly scheduled programming!</p>
-        <h3>Document Flow</h3>
-        <p>The DOM will render in a specific order (top to bottom) and each element will have its own place in the document flow</p>
-        <p>But you can take things out of where they belong</p>
-        <p>You can acheive this by using different types of positioning!</p>
-        <img src="https://media.giphy.com/media/H8iL56bXGjVE4/giphy.gif" />
+        <h3 class="fragment">Document Flow</h3>
+        <p class="fragment">The DOM will render in a specific order (top to bottom) and each element will have its own place in the document flow</p>
+        <p class="fragment">But you can take things out of where they belong</p>
+        <p class="fragment">You can acheive this by using different types of positioning!</p>
+        <img class="fragment" src="https://media.giphy.com/media/H8iL56bXGjVE4/giphy.gif" />
       </section>
 
       <section>
         <h3>Positioning</h3>
-        <p>A few ways to take elements out of their normal document flow</p>
-        <p>Position: fixed/absolute, floats</p>
+        <p class="fragment">A few ways to take elements out of their normal document flow</p>
+        <p class="fragment">Position: fixed/absolute, floats</p>
       </section>
 
       <section>
         <h3>Positioning</h3>
         <ul>
-          <li>Static - the default behavior, wherever the element is, that’s where it is</li>
-          <li>Relative - keeps the element in its normal flow, but allows you to move it around (without affecting any other elements on the page), creates a new context</li>
-          <li>Absolute - takes the element out of its normal flow, relative to its closest parent context, creates a new context</li>
-          <li>Fixed - positions the element relative to the window, keeps it in that spot forever, takes it out of the normal flow,  creates a new context</li>
-          <li>Shhhh!!! This one isn't really supported but there is also sticky.</li>
+          <li class="fragment">Static - the default behavior, wherever the element is, that’s where it is</li>
+          <li class="fragment">Relative - keeps the element in its normal flow, but allows you to move it around (without affecting any other elements on the page), creates a new context</li>
+          <li class="fragment">Absolute - takes the element out of its normal flow, relative to its closest parent context, creates a new context</li>
+          <li class="fragment">Fixed - positions the element relative to the window, keeps it in that spot forever, takes it out of the normal flow,  creates a new context</li>
+          <li class="fragment">Shhhh!!! This one isn't really supported but there is also sticky.</li>
         </ul>
       </section>
 
       <section>
         <h3>Positioning</h3>
-        <p>When you take an element out of the flow, you can’t force it out of the flow again</p>
-        <p>setting an element to position: absolute/fixed will always trump float, you can put it in your css, but float will not work, no matter the order that you put your styles in (float first position second and vice versa)</p>
+        <p class="fragment">When you take an element out of the flow, you can’t force it out of the flow again</p>
+        <p class="fragment">setting an element to position: absolute/fixed will always trump float, you can put it in your css, but float will not work, no matter the order that you put your styles in (float first position second and vice versa)</p>
       </section>
 
       <section>
         <h3>Stacking Context</h3>
         <h4>z-index!</h4>
 
-        <p>Like in real life, a document can have 3 dimensions!</p>
-        <p>Think of the document being a binder and there being a stack of papers inside (these are your elements)</p>
+        <p class="fragment">Like in real life, a document can have 3 dimensions!</p>
+        <p class="fragment">Think of the document being a binder and there being a stack of papers inside (these are your elements)</p>
 
-        <p>z-index will only work with elements that have their own context (position: relative/absolute/fixed)</p>
+        <p class="fragment">z-index will only work with elements that have their own context (position: relative/absolute/fixed)</p>
       </section>
 
       <section>
         <h3>Display</h3>
         <ul>
-          <li>
+          <li class="fragment">
             <p>Block: most elements are set to this; div, p</p>
             <p>this means that no matter how wide, they will clear each other and stack on top of one another</p>
           </li>
-          <li>
+          <li class="fragment">
             <p>Inline-block: this will allow elements to stack up next to one another, as long as there is room, keeps height/width, padding/margin constraints</p>
           </li>
-          <li>
+          <li class="fragment">
             <p>Inline: the element will only take up as much space as it needs, on spans, any styling elements (em, strong)</p>
             <p>will ignore any top/bottom margin you add, will add top/bottom padding, but not move other elements out of the way, will also ignore width and height settings</p>
           </li>
@@ -1012,10 +1068,10 @@ body p {
       <section>
         <h3>Display (continued)</h3>
         <ul>
-          <li>
+          <li class="fragment">
             <p>Table: the elements behave like a table, used with display: table-cell/table-row and so on</p>
           </li>
-          <li>
+          <li class="fragment">
             <p>None: will hide the element and remove it from affecting the document flow</p>
             <p>Not the best rendering solution, you probably shouldn’t put the element in there if you don’t want it to show, usually used in conjunction with js, elements will still load (like images)</p>
           </li>
@@ -1025,13 +1081,13 @@ body p {
       <section>
         <h3>Display (continued)</h3>
         <ul>
-          <li>
+          <li class="fragment">
             <p>Flex: used on parent element to align the internal elements wherever you need them to be</p>
             <p><a href="http://flexboxfroggy.com/">Flexbox Froggy</a></p>
             <p><a href="http://www.flexboxdefense.com/">Flexbox tower defense</a></p>
             <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guide to Flexbox</a></p>
           </li>
-          <li>
+          <li class="fragment">
             <p>Grid: also used on a parent element to position inner elements similarly to table. But allows for more granular positioning</p>
             <p><a href="https://cssgridgarden.com/">CSS Grid Garden</a></p>
             <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Guide to Grid</a></p>
@@ -1041,16 +1097,16 @@ body p {
 
       <section>
         <h3>Centering Elements on your page!</h3>
-        <pre><code>div { margin: 0 auto; }</code></pre>
-        <p>Only works on elements that have a display: block and you can only really see a change when there is a width set.</p>
+        <pre class="fragment"><code>div { margin: 0 auto; }</code></pre>
+        <p class="fragment">Only works on elements that have a display: block and you can only really see a change when there is a width set.</p>
 
-        <p>But if you have an element (or elements) using display: inline/inline-block you can center them by setting text-align: center on their parent element</p>
+        <p class="fragment">But if you have an element (or elements) using display: inline/inline-block you can center them by setting text-align: center on their parent element</p>
       </section>
 
       <section>
         <h3>Centering (continued)</h3>
         <p>Maybe you want to center something that is position: absolute/fixed</p>
-        <pre><code>div { 
+        <pre class="fragment"><code>div { 
   position: absolute;
   left: 0;
   right: 0;
@@ -1060,24 +1116,32 @@ body p {
 
       <section>
         <h3>!IMPORTANT</h3>
-        <p>This is really !important for you to remember:</p>
-        <p>Avoid using !important in your CSS</p>
-        <p>Sure, sometimes you can use it, but it overrides any other styles, and if you are trying to override styles and struggling with it, then you need to rethink your styling and not resort to !important</p>
-        <p>There are times when you might need to use it:</p>
-        <p>Some jobs might need it</p>
+        <p class="fragment">This is really !important for you to remember:</p>
+        <p class="fragment">Avoid using !important in your CSS</p>
+        <p class="fragment">Sure, sometimes you can use it, but it overrides any other styles, and if you are trying to override styles and struggling with it, then you need to rethink your styling and not resort to !important</p>
+        <p class="fragment">There are times when you might need to use it:</p>
+        <p class="fragment">Some jobs might need it</p>
       </section>
 
-      <!-- Let's develop it -->
+      <section>
+          <h3>Let's develop it!</h3>
+          <div class="fragment">
+            <p>Remove the use of any important tags! We REALLY don't need them.</p>
+            <p>Using position absolute/relative, position the text underneath the last image, over the image. (Adding any containers or elements needed.)</p>
+            <p>Center the main heading (that say's welcome to my page).</p>
+            <p>Bonus: Look up Css Grid and try to implement it on the gallery of images!</p>
+          </div>
+      </section>
 
       <section>
         <h3>DEBUGGING!</h3>
-        <p>Live in the inspector!</p>
-        <p>Every browser renders HTML elements differently</p>
-        <p><a href="https://codepen.io/ivanaveliskova/pen/PZdGbB" target="_blank">Example</a></p>
-        <p>We use CSS to try to unify how things look across all the different browsers</p>
-        <p>Sometimes browsers won’t accept certain styles without the use of browser specific prefixes</p>
-        <p>-webkit-, -ms-, -moz-, -o-</p>
-        <p>But also make sure you also include the code without the prefix at the end!</p>
+        <p class="fragment">Live in the inspector!</p>
+        <p class="fragment">Every browser renders HTML elements differently</p>
+        <p class="fragment"><a href="https://codepen.io/ivanaveliskova/pen/PZdGbB" target="_blank">Example</a></p>
+        <p class="fragment">We use CSS to try to unify how things look across all the different browsers</p>
+        <p class="fragment">Sometimes browsers won’t accept certain styles without the use of browser specific prefixes</p>
+        <p class="fragment">-webkit-, -ms-, -moz-, -o-</p>
+        <p class="fragment">But also make sure you also include the code without the prefix at the end!</p>
       </section>
 
       <section>
@@ -1089,13 +1153,13 @@ body p {
 
       <section>
         <h3>Debugging in Browsers</h3>
-        <p>Can’t access a certain browser or want to see how your code will look on a specific browser on a phone?</p>
-        <p><a target="_blank" href="https://www.browserstack.com/">Browserstack (free 30min trial)</a></p>
-        <p><a target="_blank" href="https://developer.microsoft.com/en-us/microsoft-edge/">Microsoft Edge</a>
+        <p class="fragment">Can’t access a certain browser or want to see how your code will look on a specific browser on a phone?</p>
+        <p class="fragment"><a target="_blank" href="https://www.browserstack.com/">Browserstack (free 30min trial)</a></p>
+        <p class="fragment"><a target="_blank" href="https://developer.microsoft.com/en-us/microsoft-edge/">Microsoft Edge</a>
         This takes a screen shot of your site on Edge</p>
-        <p>Codepen allows free crossbrowser testing of your code snippets</p>
-        <p>xcode can allow you to emulate iphones/ipads</p>
-        <p>Chrome has some robust mobile emulators</p>
+        <p class="fragment">Codepen allows free crossbrowser testing of your code snippets</p>
+        <p class="fragment">xcode can allow you to emulate iphones/ipads</p>
+        <p class="fragment">Chrome has some robust mobile emulators</p>
         <aside class="notes">
             Virtual Machine for mac or windows to test different browsers
             or take screenshots of how something looks on a bunch of different browsers
@@ -1105,12 +1169,12 @@ body p {
 
       <section>
         <h3>Commenting</h3>
-        <p>Not just for taking notes!</p>
-        <p>Sometimes things just won’t work no matter what you do. Maybe you are absolutely sure you wrote your markup or styles absolutely perfectly, spelled everything right and it’s still just not working, commenting out chunks of code and checking where it still works is the best way to debug something not working.</p>
-        <p>Speaking of comments!</p>
-        <p>Developers love comments! (But don't go overboard)</p>
-        <p>Comments help others understand your code if you do something a little out of the ordinary</p>
-        <p>Comments help you remember why you did something out of the ordinary</p>
+        <p class="fragment">Not just for taking notes!</p>
+        <p class="fragment">Sometimes things just won’t work no matter what you do. Maybe you are absolutely sure you wrote your markup or styles absolutely perfectly, spelled everything right and it’s still just not working, commenting out chunks of code and checking where it still works is the best way to debug something not working.</p>
+        <p class="fragment">Speaking of comments!</p>
+        <p class="fragment">Developers love comments! (But don't go overboard)</p>
+        <p class="fragment">Comments help others understand your code if you do something a little out of the ordinary</p>
+        <p class="fragment">Comments help you remember why you did something out of the ordinary</p>
         <aside class="notes">
             Comments all you to temporarily remove pieces of your code temporarily without removing it completely from your page, this helps if you accidentally close the page and can’t use ctrl/cmd + z and you completely forget what the piece of code that you were removing was
             commenting out sections of your code can help you figure out what went wrong, or what change suddenly made everything look way different than you wanted it to            
@@ -1119,61 +1183,61 @@ body p {
 
       <section>
           <h3>Debugging</h3>
-          <p>Sometimes commenting doesn't work because it's not necessarily that something is broken. But maybe adding random styles can help</p>
-          <pre><code>div { outline: 10px solid green; } </code></pre>
-          <p>Outlines will show you the space which an item takes up, but doesn't move it like a border would!</p>
+          <p class="fragment">Sometimes commenting doesn't work because it's not necessarily that something is broken. But maybe adding random styles can help</p>
+          <pre class="fragment"><code>div { outline: 10px solid green; } </code></pre>
+          <p class="fragment">Outlines will show you the space which an item takes up, but doesn't move it like a border would!</p>
         </section>
 
       <section>
         <p>Another break from out regularly scheduled program</p>
         <h3>Codepen</h3>
-        <p><a target="_blank" href="https://codepen.io/">codepen.io</a> allows you to create snippets of html/css/js and loads the result in a window immediately. It’s a really good place for testing out pieces of code, looking at other people’s fancy code and allows for cross browser testing of your code.</p>
-        <p>There are other similar <a href="http://www.sitepoint.com/7-code-playgrounds/" target="_blank">sites</a>, but personally, I really like codepen</p>
-        <p>Now back to our normal schedule</p>
+        <p class="fragment"><a target="_blank" href="https://codepen.io/">codepen.io</a> allows you to create snippets of html/css/js and loads the result in a window immediately. It’s a really good place for testing out pieces of code, looking at other people’s fancy code and allows for cross browser testing of your code.</p>
+        <p class="fragment">There are other similar <a href="http://www.sitepoint.com/7-code-playgrounds/" target="_blank">sites</a>, but personally, I really like codepen</p>
+        <p class="fragment">Now back to our normal schedule</p>
       </section>
 
       <section>
         <h3>Linting</h3>
-        <p>What is a linter?</p>
-        <p>A linter checks our code and lets us know of any bad coding practices</p>
-        <p>It will set some rules for your editor to follow and your editor can be set to autimatically fix those bad coding practices or to warn you that you did something bad.</p>
-        <p>There are some "rules" that are suggested that you can follow, but this is really just an opinion:</p>
-        <p><a href="https://github.com/hyunchulkwak/csslint/wiki/%EA%B7%9C%EC%B9%99" target="_blank">CssLint</a></p>
-        <p>And if you don't know any Korean (I don't)</p>
-        <p><a href="https://github.com/CSSLint/csslint/wiki/Rules" target="_blank">CssLint</a></p>
-        <p>Most editors have plugins for these rules to make it easier for you!</p>
+        <p class="fragment">What is a linter?</p>
+        <p class="fragment">A linter checks our code and lets us know of any bad coding practices</p>
+        <p class="fragment">It will set some rules for your editor to follow and your editor can be set to autimatically fix those bad coding practices or to warn you that you did something bad.</p>
+        <p class="fragment">There are some "rules" that are suggested that you can follow, but this is really just an opinion:</p>
+        <p class="fragment"><a href="https://github.com/hyunchulkwak/csslint/wiki/%EA%B7%9C%EC%B9%99" target="_blank">CssLint</a></p>
+        <p class="fragment">And if you don't know any Korean (I don't)</p>
+        <p class="fragment"><a href="https://github.com/CSSLint/csslint/wiki/Rules" target="_blank">CssLint</a></p>
+        <p class="fragment">Most editors have plugins for these rules to make it easier for you!</p>
       </section>
 
       <section>
         <h3>Clean Code</h3>
-        <p>White space isn't read by the browser. So make good use of it!</p>
-        <p>Use indentation!</p>
-        <p>add a space between a CSS selector and the opening of the rule block ( .some-class<span style="background: blue;"> </span>{} ) (the blue highlighted part)</p>
-        <p><a target="_blank" href="http://cssguidelin.es/">CSS Guidelines</a></p>
+        <p class="fragment">White space isn't read by the browser. So make good use of it!</p>
+        <p class="fragment">Use indentation!</p>
+        <p class="fragment">add a space between a CSS selector and the opening of the rule block ( .some-class<span style="background: blue;"> </span>{} ) (the blue highlighted part)</p>
+        <p class="fragment"><a target="_blank" href="http://cssguidelin.es/">CSS Guidelines</a></p>
       </section>
 
 			<section>
         <h3>Code Validators</h3>
         
-        <p>Code validators will check your code if it is written correctly:</p>
+        <p class="fragment">Code validators will check your code if it is written correctly:</p>
         <ul>
-          <li>check for missing closing tags</li>
-          <li>tags written in the wrong order</li>
-          <li>missing semi-colons</li>
-          <li>missing alt tags on images</li>
+          <li class="fragment">check for missing closing tags</li>
+          <li class="fragment">tags written in the wrong order</li>
+          <li class="fragment">missing semi-colons</li>
+          <li class="fragment">missing alt tags on images</li>
         </ul>
-        <p><a target="_blank" href="https://validator.w3.org/">HTMl Validator</a></p>
-        <p><a target="_blank" href="http://jigsaw.w3.org/css-validator/">CSS Validator</a></p>
+        <p class="fragment"><a target="_blank" href="https://validator.w3.org/">HTMl Validator</a></p>
+        <p class="fragment"><a target="_blank" href="http://jigsaw.w3.org/css-validator/">CSS Validator</a></p>
       </section>
       
       <section>
         <h3>Moar debugging!</h3>
-        <p>Can't figure out a problem using any of these tips?</p>
-        <p>ASK REAL PEOPLE!</p>
-        <p><a target="_blank" href="https://stackoverflow.com/">StackOverflow</a></p>
-        <p>GDI has a Slack group! Ask in the #css-help channel </p>
-        <p>We also offer awesome Code & Coffee meetups once a month where you can ask real people real questions!</p>
-        <p>Also, please feel free to bug me at any time of day (morning, evening, 3am). I might not respond at 3am, but I will definitely respond within 24 hours.</p>
+        <p class="fragment">Can't figure out a problem using any of these tips?</p>
+        <p class="fragment">ASK REAL PEOPLE!</p>
+        <p class="fragment"><a target="_blank" href="https://stackoverflow.com/">StackOverflow</a></p>
+        <p class="fragment">GDI has a Slack group! Ask in the #css-help channel </p>
+        <p class="fragment">We also offer awesome Code & Coffee meetups once a month where you can ask real people real questions!</p>
+        <p> class="fragment"Also, please feel free to bug me at any time of day (morning, evening, 3am). I might not respond at 3am, but I will definitely respond within 24 hours.</p>
       </section>
 
       <section>
