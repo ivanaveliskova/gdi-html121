@@ -1,15 +1,15 @@
-<p>Hello $COURSE_NAME students!</p>
+<p>Hello HTML 102 students!</p>
 
-<p>Thanks again for attending the $COURSE_NAME class.</p>
+<p>Thanks again for attending the Intermediate HTML/CSS class. I apologize again we were not able to cover all of the material. Your feedback is very valuable to making this class better.</p>
 
-<p>Please fill out the class survey to let the organizers and me know what you thought of the class: $SURVEY_LINK</p>
+<p>Please fill out the class survey to let the organizers and me know what you thought of the class: <a href="https://goo.gl/forms/XFs2C2AxV3B2m5n82">https://goo.gl/forms/XFs2C2AxV3B2m5n82</a></p>
 
-<p>The class slides are here: http://gdiphilly.github.io/$YOUR-REPOSITORY-NAME</p>
+<p>The class slides are here: <a href="http://www.ivanaveliskova.com/gdi-html121">http://www.ivanaveliskova.com/gdi-html121</a></p>
 
-<p>You may also want to check out $INTERESTING_RESOURCES.</p>
+<p>Wondering what to take next? See the "Suggested Course Sequences" document that's on our Meetup site, under the tab "Pages", which can give you some guidance.  Here's a direct link: http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Suggested_Course_Sequences/ .  In particular, I would recommend the Intermediate HTML/CSS class (201) or Intro to JavaScript.</p>
 
-<p>Wondering what to take next? See the "Suggested Course Sequences" document that's on our Meetup site, under the tab "Pages", which can give you some guidance.  Here's a direct link: http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Suggested_Course_Sequences/ .  In particular, I would recommend $YOUR_RECOMMENDATIONS.</p>
+<p>Finally, GDI Philly is on Slack, and we'd love for you to be part of the conversation! There's a sign up sheet on our Meetup site: under the tab "Pages", click on "Get Involved", and choose "Join our Slack Team". Here's a direct URL: <a href="https://join.slack.com/t/gdiphilly/shared_invite/enQtMjkyODgyMTc2MzUzLTNmOTU2MWMzY2E3NzY2MTk3OWQ0N2Q2YzllYjBlMzQ3NjJjNzJmOGEzYWMzZTdiOWQzNDlhMGFlOGQ2ZDFkZjQ">Join Slack!</a></p>
+<p>Thank you again for asking really awesome questions and feel free to ask more questions on Slack as well!</p>
+<p>Cheers,</p>
 
-<p>Finally, GDI Philly is on Slack, and we'd love for you to be part of the conversation!  There's a sign up sheet on our Meetup site: under the tab "Pages", click on "Get Involved", and choose "Join our Slack Team". Here's a direct URL:  http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Get_Involved/</p>
-
-<p>$FRIENDLY_CLOSING</p>
+<p>Ivana</p>
